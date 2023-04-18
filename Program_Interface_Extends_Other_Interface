@@ -1,0 +1,34 @@
+interface Interface1 {
+    void m();
+}
+
+interface Interface2 {
+    void m1();
+}
+
+interface Interface3 extends Interface1, Interface2{
+    void m2();
+}
+
+class MyClass implements Interface3 {
+    public void m() {
+        System.out.println("First Method called");
+    }
+
+    public void m1() {
+        System.out.println("Second Method called");
+    }
+
+    public void m2() {
+        System.out.println("Third Method called");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.m();
+        obj.m1();
+        obj.m2();
+    }
+}
